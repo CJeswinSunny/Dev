@@ -506,7 +506,6 @@ body {
 }
 
 .animated-text .word {
-    opacity: 0;
     animation: slideInUp 0.8s ease forwards;
 }
 

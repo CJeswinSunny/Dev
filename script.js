@@ -88,32 +88,32 @@ const observer = new IntersectionObserver((entries) => {
             // Animate about cards
             const aboutCards = entry.target.querySelectorAll('.about-card');
             aboutCards.forEach((card, index) => {
-                card.style.animation = `slideInUp 0.6s ease ${0.1 * index}s backwards`;
+                card.style.animation = `slideInUp 0.6s ease ${0.1 * index}s forwards`;
             });
 
             // Animate stat boxes
             const statBoxes = entry.target.querySelectorAll('.stat-box');
             statBoxes.forEach((box, index) => {
-                box.style.animation = `slideInUp 0.6s ease ${0.1 * index}s backwards`;
+                box.style.animation = `slideInUp 0.6s ease ${0.1 * index}s forwards`;
                 animateNumbers(box);
             });
 
             // Animate portfolio cards
             const portfolioCards = entry.target.querySelectorAll('.portfolio-card');
             portfolioCards.forEach((card, index) => {
-                card.style.animation = `slideInUp 0.6s ease ${0.05 * index}s backwards`;
+                card.style.animation = `slideInUp 0.6s ease ${0.05 * index}s forwards`;
             });
 
             // Animate testimonials
             const testimonialCards = entry.target.querySelectorAll('.testimonial-card');
             testimonialCards.forEach((card, index) => {
-                card.style.animation = `slideInUp 0.6s ease ${0.1 * index}s backwards`;
+                card.style.animation = `slideInUp 0.6s ease ${0.1 * index}s forwards`;
             });
 
             // Animate contact items
             const contactItems = entry.target.querySelectorAll('.contact-item');
             contactItems.forEach((item, index) => {
-                item.style.animation = `slideInUp 0.6s ease ${0.1 * index}s backwards`;
+                item.style.animation = `slideInUp 0.6s ease ${0.1 * index}s forwards`;
             });
 
             observer.unobserve(entry.target);
