@@ -56,7 +56,7 @@ function animateLetters(element) {
             const span = document.createElement('span');
             span.textContent = letter;
             span.className = 'letter-animate';
-            span.style.animation = `slideInUp 0.6s ease ${0.05 * letterIndex}s backwards`;
+            span.style.animation = `slideInUp 0.6s ease ${0.05 * letterIndex}s forwards`;
             word.appendChild(span);
         });
     });
