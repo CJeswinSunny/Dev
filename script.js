@@ -46,17 +46,19 @@ navLinks.forEach(link => {
 
 // ============= LETTER ANIMATIONS =============
 function animateLetters(element) {
+    if (!element) return;
+    
     const words = element.querySelectorAll('.word');
-
-    words.forEach((word, index) => {
-        const letters = word.textContent.split('');
+    
+    words.forEach((word) => {
+        const text = word.textContent;
         word.innerHTML = '';
-
-        letters.forEach((letter, letterIndex) => {
+        
+        text.split('').forEach((letter, index) => {
             const span = document.createElement('span');
-            span.textContent = letter;
             span.className = 'letter-animate';
-            span.style.animation = `slideInUp 0.6s ease ${0.05 * letterIndex}s forwards`;
+            span.textContent = letter;
+            span.style.animation = `slideInUp 0.6s ease ${index * 0.05}s forwards`;
             word.appendChild(span);
         });
     });

@@ -243,6 +243,16 @@ body {
     margin: 0 auto;
 }
 
+.hero-name {
+    font-size: 18px;
+    color: #D4AF37;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .hero-title {
     font-size: clamp(48px, 8vw, 80px);
     font-weight: 800;
@@ -1074,6 +1084,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: linear-gradient(135deg, rgba(255, 253, 248, 0.9), rgba(212, 175, 55, 0.1));
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .form-group {
