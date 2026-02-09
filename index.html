@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeswin Sunny - Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Follower -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">C Jeswin Sunny</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#stats" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">Welcome to my portfolio</p>
+                <h1 class="hero-title">C Jeswin <span class="gradient-text">Sunny</span></h1>
+                <p class="hero-description">Full Stack Developer | UI/UX Designer | Problem Solver</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-icon">💻</div>
+                    <div class="card-text">Web Development</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-text">UI Design</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-text">Performance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">01</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="text-reveal">I'm a passionate full-stack developer with 5+ years of experience creating digital solutions that make an impact. My journey in web development has equipped me with skills in modern technologies and a deep understanding of user-centered design.</p>
+                    <p class="text-reveal">I specialize in building scalable applications, crafting beautiful interfaces, and solving complex problems with elegant code. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <h3>Frontend</h3>
+                            <p>React, Vue, Tailwind CSS</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Backend</h3>
+                            <p>Node.js, Express, MongoDB</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>Tools</h3>
+                            <p>Git, Docker, AWS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-visual">
+                    <div class="skill-bar">
+                        <div class="skill-label">React</div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">JavaScript</div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">UI/UX Design</div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">Node.js</div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">Database Design</div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 87%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Stats -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number counter" data-target="50+">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                    <div class="stat-icon">📊</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number counter" data-target="150+">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                    <div class="stat-icon">😊</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number counter" data-target="5+">0</div>
+                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-icon">⭐</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number counter" data-target="100+">0</div>
+                    <div class="stat-label">Code Reviews</div>
+                    <div class="stat-icon">✅</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">02</span>
+                Featured Projects
+            </h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500&h=400&fit=crop" alt="E-Commerce Platform">
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with real-time inventory management</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop&q=80" alt="Mobile App Design">
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Mobile App Design</h3>
+                        <p>Beautiful UI design for a fitness tracking application</p>
+                        <div class="tech-tags">
+                            <span>Figma</span>
+                            <span>UI Design</span>
+                            <span>Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=400&fit=crop" alt="Analytics Dashboard">
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time analytics dashboard with interactive visualizations</p>
+                        <div class="tech-tags">
+                            <span>Vue.js</span>
+                            <span>Chart.js</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=500&h=400&fit=crop" alt="Social Platform">
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Social Platform</h3>
+                        <p>Cross-platform social network application</p>
+                        <div class="tech-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop" alt="Brand Identity">
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Brand Identity System</h3>
+                        <p>Complete brand identity design including logo and guidelines</p>
+                        <div class="tech-tags">
+                            <span>Branding</span>
+                            <span>Typography</span>
+                            <span>Design System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop" alt="SaaS Platform">
+                        <div class="overlay">
+                            <a href="#" class="view-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SaaS Platform</h3>
+                        <p>Enterprise SaaS application with advanced features</p>
+                        <div class="tech-tags">
+                            <span>Next.js</span>
+                            <span>Prisma</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">03</span>
+                What Clients Say
+            </h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Jeswin delivered an exceptional website that exceeded our expectations. Professional, creative, and highly responsive to feedback."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Tech Startup</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Working with Jeswin was a game-changer. The attention to detail and coding expertise transformed our vision into reality."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Founder, Design Agency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Brilliant developer! Delivered on time, great communication, and the final product was beautiful and functional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Emma Williams</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">04</span>
+                Let's Work Together
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p>cjeswinsunny@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Phone</h3>
+                            <p>+91 89211 73155</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Location</h3>
+                            <p>Ernakulam, Kerala, India</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <span class="form-label">Name</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <span class="form-label">Email</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                        <span class="form-label">Subject</span>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <span class="form-label">Message</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jeswin Sunny</h3>
+                    <p>Full Stack Developer & UI/UX Designer</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jeswin Sunny. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
