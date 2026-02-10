@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Jeswin Sunny - Full Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cursor Elements -->
-    <div class="cursor-follower"></div>
-    <div class="cursor-dot"></div>
+    <!-- Particle Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-blur"></div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo-wrapper">
-                <span>CJS</span>
+            <div class="logo">
+                <span class="logo-text">CJS</span>
                 <span class="logo-dot">.</span>
             </div>
             <ul class="nav-menu">
@@ -39,66 +48,65 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <span class="hero-name">Hello! 👋</span>
-            <h1 class="hero-title">
-                <span class="word">Hi, I'm C Jeswin Sunny</span>
-            </h1>
-            <p class="hero-subtitle">
-                Full Stack Developer crafting modern digital experiences.
-                <span class="typing-text"></span>
-            </p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span class="btn-text">View My Work</span>
-                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span class="btn-text">Get In Touch</span>
-                    <span class="btn-icon"><i class="fas fa-envelope"></i></span>
-                </a>
+            <h1 class="hero-title">C Jeswin Sunny</h1>
+            <div class="hero-subtitle">
+                <span class="typing-text">Full Stack Developer</span>
+            </div>
+            <p class="hero-description">Crafting elegant digital experiences with modern technologies</p>
+            <button class="cta-button">
+                <span>View My Work</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
         </div>
-
-        <!-- Floating Elements -->
-        <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-header">
-                <span class="section-label">Know Me</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-
-            <div class="about-grid animate-on-scroll">
+            <div class="about-content">
                 <div class="about-text">
-                    <h3>Who Am I?</h3>
-                    <p>I'm a Full Stack Developer with 5+ years of experience building scalable web applications. I love transforming complex problems into elegant solutions using modern technologies.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or writing technical blogs about web development.</p>
-                    <p>My passion lies in creating beautiful, performant, and user-friendly applications that make a real impact.</p>
+                    <h2>About Me</h2>
+                    <p>I'm a passionate Full Stack Developer with 5+ years of experience building scalable web applications. I specialize in creating beautiful, performant, and user-centric digital solutions that solve real-world problems.</p>
+                    <p>My expertise spans across modern frontend frameworks like React and Vue.js, backend technologies like Node.js and Express, and databases including MongoDB and PostgreSQL. I'm always learning and staying updated with the latest web technologies.</p>
+                    <p>Beyond coding, I'm enthusiastic about UI/UX design, open-source contributions, and mentoring junior developers.</p>
                 </div>
-                <div class="about-card">
-                    <h4>My Approach</h4>
-                    <ul>
-                        <li>📱 Responsive Design</li>
-                        <li>⚡ Performance First</li>
-                        <li>🎨 Clean Code</li>
-                        <li>🧪 Well Tested</li>
-                        <li>🔒 Secure & Scalable</li>
-                        <li>♿ Accessible</li>
+                <div class="about-card glass-effect">
+                    <h3>Key Skills</h3>
+                    <ul class="skills-list">
+                        <li>
+                            <span class="skill-icon">⚡</span>
+                            <span>JavaScript, TypeScript</span>
+                        </li>
+                        <li>
+                            <span class="skill-icon">⚛️</span>
+                            <span>React, Vue.js</span>
+                        </li>
+                        <li>
+                            <span class="skill-icon">🔧</span>
+                            <span>Node.js, Express</span>
+                        </li>
+                        <li>
+                            <span class="skill-icon">🗄️</span>
+                            <span>MongoDB, PostgreSQL</span>
+                        </li>
+                        <li>
+                            <span class="skill-icon">🎨</span>
+                            <span>UI/UX Design</span>
+                        </li>
+                        <li>
+                            <span class="skill-icon">🚀</span>
+                            <span>DevOps, AWS</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -108,108 +116,77 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <div class="skills-header">
-                <span class="section-label">My Expertise</span>
-                <h2 class="section-title">Technical Skills</h2>
-            </div>
-
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
-                <!-- Frontend Skills -->
-                <div class="skill-card animate-on-scroll">
+                <div class="skill-category">
                     <h3>Frontend</h3>
-                    <div class="skill-item">
-                        <span>React</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%; animation-delay: 0.2s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="95">
+                            <span>React</span>
                         </div>
-                        <span class="skill-percentage">95%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>Vue.js</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%; animation-delay: 0.3s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="90">
+                            <span>Vue.js</span>
                         </div>
-                        <span class="skill-percentage">90%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>TypeScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%; animation-delay: 0.4s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="92">
+                            <span>TypeScript</span>
                         </div>
-                        <span class="skill-percentage">92%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>CSS/Animation</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 94%; animation-delay: 0.5s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="94">
+                            <span>CSS/Animation</span>
                         </div>
-                        <span class="skill-percentage">94%</span>
                     </div>
                 </div>
 
-                <!-- Backend Skills -->
-                <div class="skill-card animate-on-scroll">
+                <div class="skill-category">
                     <h3>Backend</h3>
-                    <div class="skill-item">
-                        <span>Node.js</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 93%; animation-delay: 0.2s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="93">
+                            <span>Node.js</span>
                         </div>
-                        <span class="skill-percentage">93%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>Express</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%; animation-delay: 0.3s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="91">
+                            <span>Express</span>
                         </div>
-                        <span class="skill-percentage">90%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>Databases</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 91%; animation-delay: 0.4s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="89">
+                            <span>REST APIs</span>
                         </div>
-                        <span class="skill-percentage">91%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>REST APIs</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%; animation-delay: 0.5s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="88">
+                            <span>GraphQL</span>
                         </div>
-                        <span class="skill-percentage">88%</span>
                     </div>
                 </div>
 
-                <!-- Tools & DevOps -->
-                <div class="skill-card animate-on-scroll">
-                    <h3>Tools & DevOps</h3>
-                    <div class="skill-item">
-                        <span>Git</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%; animation-delay: 0.2s;"></div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="91">
+                            <span>MongoDB</span>
                         </div>
-                        <span class="skill-percentage">92%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>Docker</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 87%; animation-delay: 0.3s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="90">
+                            <span>PostgreSQL</span>
                         </div>
-                        <span class="skill-percentage">87%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>AWS</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%; animation-delay: 0.4s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="87">
+                            <span>Firebase</span>
                         </div>
-                        <span class="skill-percentage">85%</span>
                     </div>
-                    <div class="skill-item">
-                        <span>CI/CD</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 89%; animation-delay: 0.5s;"></div>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="85">
+                            <span>Redis</span>
                         </div>
-                        <span class="skill-percentage">89%</span>
                     </div>
                 </div>
             </div>
@@ -219,164 +196,85 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="projects-header">
-                <span class="section-label">My Portfolio</span>
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
-
+            <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card animate-on-scroll">
+                <div class="project-card glass-effect">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500&h=400&fit=crop" alt="E-Commerce Platform">
                         <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3>E-Commerce Platform</h3>
-                                <p>Real-time inventory management</p>
-                            </div>
+                            <a href="#" class="project-btn">View Project</a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>E-Commerce Platform</h3>
-                        <p class="project-description">Full-stack e-commerce solution with real-time inventory management, payment integration, and admin dashboard.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
+                        <p>Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="#" class="link-btn">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="#" class="link-btn">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card animate-on-scroll">
+                <div class="project-card glass-effect">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop" alt="Task Management App">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop" alt="Task Management">
                         <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3>Task Management App</h3>
-                                <p>Collaborative productivity tool</p>
-                            </div>
+                            <a href="#" class="project-btn">View Project</a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Task Management App</h3>
-                        <p class="project-description">Real-time collaborative task management application with team features, notifications, and progress tracking.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Tailwind</span>
+                        <p>Collaborative task management tool with real-time updates, team features, and progress tracking.</p>
+                        <div class="tech-tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="#" class="link-btn">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="#" class="link-btn">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card animate-on-scroll">
+                <div class="project-card glass-effect">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=400&fit=crop" alt="Analytics Dashboard">
                         <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3>Analytics Dashboard</h3>
-                                <p>Real-time data visualization</p>
-                            </div>
+                            <a href="#" class="project-btn">View Project</a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Analytics Dashboard</h3>
-                        <p class="project-description">Interactive analytics dashboard with real-time data visualization, custom reports, and exportable insights.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">Node.js</span>
+                        <p>Interactive analytics dashboard with real-time data visualization and custom reporting features.</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Node.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=500&h=400&fit=crop" alt="Social Platform">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3>Social Platform</h3>
-                                <p>Cross-platform social network</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Social Platform</h3>
-                        <p class="project-description">Cross-platform social networking application with real-time messaging, user profiles, and community features.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Redux</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop" alt="SaaS Platform">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3>SaaS Platform</h3>
-                                <p>Enterprise application suite</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>SaaS Platform</h3>
-                        <p class="project-description">Enterprise SaaS platform with multi-tenancy, advanced features, subscription management, and analytics.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Prisma</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1633356052544-0db52d62c2a6?w=500&h=400&fit=crop" alt="AI Chat Application">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <h3>AI Chat App</h3>
-                                <p>Intelligent chatbot platform</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>AI Chat Application</h3>
-                        <p class="project-description">AI-powered chatbot with natural language processing, machine learning integration, and real-time conversations.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">WebSocket</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="#" class="link-btn">
+                                <i class="fas fa-external-link-alt"></i> Live
+                            </a>
+                            <a href="#" class="link-btn">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -387,53 +285,45 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <div class="experience-header">
-                <span class="section-label">My Journey</span>
-                <h2 class="section-title">Experience & Internships</h2>
-            </div>
-
+            <h2>Experience & Journey</h2>
             <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item animate-on-scroll">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content glass-effect">
                         <div class="timeline-date">Jan 2023 - Present</div>
-                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
-                        <p class="timeline-company">TechCorp Solutions</p>
-                        <p class="timeline-description">Leading development of scalable microservices architecture, mentoring junior developers, and implementing best practices for code quality and performance optimization.</p>
+                        <h3>Senior Full Stack Developer</h3>
+                        <p class="company">TechCorp Solutions</p>
+                        <p class="description">Leading development of scalable microservices architecture, mentoring junior developers, and implementing best practices for code quality.</p>
                     </div>
                 </div>
 
-                <!-- Experience 2 -->
-                <div class="timeline-item animate-on-scroll">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content glass-effect">
                         <div class="timeline-date">June 2021 - Dec 2022</div>
-                        <h3 class="timeline-title">Full Stack Developer</h3>
-                        <p class="timeline-company">StartUp Innovations</p>
-                        <p class="timeline-description">Developed and maintained multiple web applications using React and Node.js, implemented RESTful APIs, and improved application performance by 40%.</p>
+                        <h3>Full Stack Developer</h3>
+                        <p class="company">StartUp Innovations</p>
+                        <p class="description">Developed and maintained multiple web applications using React and Node.js, improved performance by 40%.</p>
                     </div>
                 </div>
 
-                <!-- Experience 3 -->
-                <div class="timeline-item animate-on-scroll">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content glass-effect">
                         <div class="timeline-date">Aug 2020 - May 2021</div>
-                        <h3 class="timeline-title">Junior Web Developer (Internship)</h3>
-                        <p class="timeline-company">Digital Agency Pro</p>
-                        <p class="timeline-description">Built responsive web applications, collaborated with designers, and learned best practices in HTML, CSS, JavaScript, and frontend frameworks.</p>
+                        <h3>Junior Web Developer Intern</h3>
+                        <p class="company">Digital Agency Pro</p>
+                        <p class="description">Built responsive web applications, collaborated with designers, and learned best practices in modern web development.</p>
                     </div>
                 </div>
 
-                <!-- Experience 4 -->
-                <div class="timeline-item animate-on-scroll">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content glass-effect">
                         <div class="timeline-date">2020</div>
-                        <h3 class="timeline-title">Bachelor's in Computer Science</h3>
-                        <p class="timeline-company">University of Technology</p>
-                        <p class="timeline-description">Completed comprehensive coursework in software engineering, data structures, algorithms, and database management.</p>
+                        <h3>Bachelor's in Computer Science</h3>
+                        <p class="company">University of Technology</p>
+                        <p class="description">Completed comprehensive coursework in software engineering, data structures, and modern web technologies.</p>
                     </div>
                 </div>
             </div>
@@ -443,44 +333,56 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-header">
-                <span class="section-label">Get In Touch</span>
-                <h2 class="section-title">Let's Build Something Together</h2>
-            </div>
-
-            <div class="contact-wrapper">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <span class="form-label">Full Name</span>
-                        <span class="form-border"></span>
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form glass-effect">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <label for="name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-status"></div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@jeswin.dev</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <span class="form-label">Email Address</span>
-                        <span class="form-border"></span>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                        <span class="form-label">Subject</span>
-                        <span class="form-border"></span>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                        <span class="form-label">Message</span>
-                        <span class="form-border"></span>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        Send Message
-                        <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
-                    </button>
-
-                    <div class="form-status" style="margin-top: 20px; text-align: center; color: var(--neon-primary);"></div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -490,39 +392,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h2>C Jeswin Sunny</h2>
+                    <h3>C Jeswin Sunny</h3>
                     <p>Full Stack Developer & Creative Problem Solver</p>
                 </div>
-
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-
-                    <div class="social-icons">
-                        <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="mailto:hello@example.com" class="social-icon" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 C Jeswin Sunny. All rights reserved. | Crafted with <span style="color: var(--neon-accent);">❤</span> and code.</p>
+                <p>&copy; 2026 C Jeswin Sunny. All rights reserved. | Crafted with <span class="heart">❤</span> by code.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/script.js"></script>
 </body>
 </html>
