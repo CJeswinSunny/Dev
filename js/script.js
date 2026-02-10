@@ -35,11 +35,8 @@ requestAnimationFrame(raf);
 // Sync Lenis scroll with GSAP ScrollTrigger
 lenis.on('scroll', ScrollTrigger.update);
 
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
+// NOTE: keep a single RAF loop driving Lenis (above). Removing duplicate
+// gsap.ticker lenis.raf call which caused double updates and high CPU usage.
 
 // ============================================
 // PARTICLES BACKGROUND
@@ -58,35 +55,48 @@ function initParticles() {
         canvas.height = window.innerHeight;
     }
 
-    function createParticles(count = 50) {
+    function createParticles() {
+        // create particle count based on viewport area for better perf
+        const area = canvas.width * canvas.height;
+        // one particle per ~150k px, clamp between 30 and 120
+        const count = Math.max(30, Math.min(120, Math.floor(area / 150000)));
         particles = [];
         for (let i = 0; i < count; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                size: Math.random() * 1.5,
-                opacity: Math.random() * 0.3 + 0.1,
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                size: Math.random() * 1.6 + 0.2,
+                opacity: Math.random() * 0.25 + 0.05,
             });
         }
     }
 
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Throttle particle rendering to ~30fps using rAF timestamp
+    let lastFrame = 0;
+    function animateParticles(timestamp) {
+        if (!timestamp) timestamp = performance.now();
+        const delta = timestamp - lastFrame;
+        // 33ms ~= 30fps
+        if (delta > 33) {
+            lastFrame = timestamp;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        particles.forEach((particle) => {
-            particle.x += particle.vx;
-            particle.y += particle.vy;
+            for (let i = 0; i < particles.length; i++) {
+                const particle = particles[i];
+                particle.x += particle.vx;
+                particle.y += particle.vy;
 
-            if (particle.x < 0) particle.x = canvas.width;
-            if (particle.x > canvas.width) particle.x = 0;
-            if (particle.y < 0) particle.y = canvas.height;
-            if (particle.y > canvas.height) particle.y = 0;
+                if (particle.x < 0) particle.x = canvas.width;
+                if (particle.x > canvas.width) particle.x = 0;
+                if (particle.y < 0) particle.y = canvas.height;
+                if (particle.y > canvas.height) particle.y = 0;
 
-            ctx.fillStyle = `rgba(0, 240, 255, ${particle.opacity})`;
-            ctx.fillRect(particle.x, particle.y, particle.size, particle.size);
-        });
+                ctx.fillStyle = `rgba(0, 240, 255, ${particle.opacity})`;
+                ctx.fillRect(Math.round(particle.x), Math.round(particle.y), particle.size, particle.size);
+            }
+        }
 
         animationId = requestAnimationFrame(animateParticles);
     }
@@ -271,14 +281,13 @@ gsap.utils.toArray('.about-text p').forEach((element, index) => {
     gsap.from(element, {
         scrollTrigger: {
             trigger: element,
-            start: 'top 80%',
-            end: 'top 20%',
-            scrub: 1,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
         },
         opacity: 0,
-        y: 30,
+        y: 24,
         duration: 0.6,
-        delay: index * 0.1,
+        delay: index * 0.08,
     });
 });
 
@@ -386,15 +395,27 @@ gsap.from('.contact-info', {
 // PARALLAX EFFECT
 // ============================================
 
-gsap.utils.toArray('section').forEach((section) => {
-    gsap.to(section, {
-        scrollTrigger: {
-            trigger: section,
-            scrub: 1,
-            markers: false,
-        },
-        y: window.innerHeight * 0.1,
-    });
+// Light parallax only on hero blobs to reduce CPU usage
+gsap.to('.blob-1', {
+    yPercent: -10,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '#home',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+    },
+});
+
+gsap.to('.blob-2', {
+    yPercent: -6,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '#home',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+    },
 });
 
 // ============================================
